@@ -19,11 +19,6 @@
     background-color: var(--color-dark-alt);
   }
 
-  // mark,
-  // .highlight-alt {
-  //   background-color: var(--color-highlight-alt);
-  // }
-
   .site-header {
     background-color: var(--color-dark-alt);
   }
@@ -44,6 +39,10 @@
     [aria-current='page']:focus {
       outline: double var(--color-light) 0.5rem;
     }
+  }
+  // todo, combine menu and nav
+  nav.navbar ul {
+    background: var(--color-dark);
   }
 
   .meta-data li:before {

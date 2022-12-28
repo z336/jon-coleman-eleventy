@@ -16,6 +16,7 @@ module.exports = function (eleventyConfig) {
   // Passthroughs
   eleventyConfig.addPassthroughCopy('./src/assets/fonts/');
   eleventyConfig.addPassthroughCopy('./src/assets/images/');
+  eleventyConfig.addPassthroughCopy('./src/assets/scripts/');
 
   // Filters
   eleventyConfig.addFilter('readableDate', readableDate);

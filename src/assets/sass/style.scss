@@ -119,6 +119,10 @@ time {
   padding-block: var(--space-3xs-2xs);
 }
 
+button {
+  cursor: pointer;
+}
+
 :focus {
   outline: solid var(--color-dark) 0.2rem;
 }

@@ -1,28 +1,35 @@
-const theme = document.querySelector('#theme');
+const nav = document.querySelector('nav');
+const list = nav.querySelector('ul');
+const burgerClone = document
+  .querySelector('#burger-template')
+  .content.cloneNode(true);
+const svg = nav.querySelector('svg');
 
-theme.addEventListener('click', function () {
-  document.body.classList.toggle('invert');
-  if (document.body.classList.contains('invert')) {
-    localStorage.setItem('website_theme', 'invert');
-  } else {
-    localStorage.setItem('website_theme', 'default');
+const button = burgerClone.querySelector('button');
+button.addEventListener('click', (e) => {
+  const isOpen = button.getAttribute('aria-expanded') === 'false';
+  button.setAttribute('aria-expanded', isOpen);
+});
+
+// avoid DRY: disabling menu
+const disableMenu = () => {
+  button.setAttribute('aria-expanded', false);
+  button.focus();
+};
+
+//  close on escape
+nav.addEventListener('keyup', (e) => {
+  if (e.code === 'Escape') {
+    disableMenu();
   }
 });
 
-function retrieve_theme() {
-  var theme = localStorage.getItem('website_theme');
-  if (theme != null) {
-    document.body.classList.remove('default', 'invert');
-    document.body.classList.add(theme);
+// close if clicked outside of event target
+document.addEventListener('click', (e) => {
+  const isClickInsideElement = nav.contains(e.target);
+  if (!isClickInsideElement) {
+    disableMenu();
   }
-}
+});
 
-retrieve_theme();
-
-window.addEventListener(
-  'storage',
-  function () {
-    retrieve_theme();
-  },
-  false
-);
+nav.insertBefore(burgerClone, list);
