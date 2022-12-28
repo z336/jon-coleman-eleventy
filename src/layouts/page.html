@@ -1,0 +1,27 @@
+---
+layout: base.html
+---
+
+<article>
+  <header class="region | less | invert">
+    <div class="wrapper">
+      <h1>{{ title }}</h1>
+      {% if date %}
+      <time datetime="{{ date | htmlDateString }}"
+        >{{ date | readableDate }}</time
+      >
+      {% endif %} {% if tags %} {% assign tags = tags | filterTagList | sort %}
+      <ul class="tags | cluster">
+        {% for tag in tags %}
+        <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </header>
+  <article class="flow | region | wrapper | content">
+    {% if description %}
+    <p class="tldr"><span class="display">tldr</span>—{{ description }}</p>
+    {% endif %} {{ content }}
+  </article>
+</article>

@@ -1,0 +1,29 @@
+<footer class="region | invert">
+  <div class="flow | wrapper">
+    <p class="display">Built with</p>
+    <ul>
+      {% for entry in metadata.credit.build %}
+      <li>
+        <a href="{{ entry.url }}">{{ entry.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="display">Hosted and deployed</p>
+    <ul>
+      {% for entry in metadata.credit.host %}
+      <li>
+        <a href="{{ entry.url }}">{{ entry.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="display">Inspired by</p>
+    <ul>
+      {% for entry in metadata.credit.inspiration %}
+      <li>
+        <a href="{{ entry.url }}">{{ entry.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="display">{{ metadata.author }} {{ '' | getFullYear }}</p>
+  </div>
+</footer>

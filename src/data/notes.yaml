@@ -1,0 +1,16 @@
+- jot:
+  title: I found this online
+  date: 2022-12-19
+  description: lorem ipsum satanico
+  url: https://duckduckgo.com/
+  tags:
+    - apple
+    - banana
+- jot:
+  title: I found this too
+  date: 2022-12-24
+  description: lorem ipsum satanico something something
+  url: https://google.com/
+  tags:
+    - lime
+    - chocolate

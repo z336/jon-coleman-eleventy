@@ -1,0 +1,18 @@
+{% assign currentPage = page.url %}
+
+<nav>
+  <ul class="display | menu">
+    {% for item in navigation %}
+    <li>
+      <a href="{{ item.url }}" 
+      {% if currentPage == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
+    </li>
+    {% endfor %}
+    <li>     
+    <label class="switch">
+      <input id="theme" type="checkbox" />
+      <span class="slider"></span>
+    </label>
+  </li>
+  </ul>
+</nav>

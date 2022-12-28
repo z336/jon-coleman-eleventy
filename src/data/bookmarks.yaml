@@ -1,0 +1,22 @@
+- jot:
+  title: DuckDuckGo
+  url: https://duckduckgo.com/
+  tags:
+    - apple
+    - lime
+- jot:
+  title: The Verge
+  url: https://theverge.com/
+  tags:
+    - banana
+- jot:
+  title: Eleventy
+  url: https://11ty.dev/
+  tags:
+    - apple
+    - chocolate
+- jot:
+  title: MaximumRockNRoll
+  url: https://maximumrocknroll.com/
+  tags:
+    - apple

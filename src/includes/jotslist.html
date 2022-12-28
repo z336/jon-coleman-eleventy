@@ -1,0 +1,20 @@
+<ul class="content-list">
+  {% for jot in jotslist %}
+  <li class="meta-data">
+    <h2><a href="{{ jot.url }}">{{ jot.title }}</a></h2>
+    {% if jot.date %}
+    <time datetime="{{ jot.date | htmlDateString }}"
+      >{{ jot.date | readableDate }}</time
+    >
+    {% endif %} {% if jot.description %}
+    <p>{{ jot.description }}</p>
+    {% endif %}
+
+    <ul class="cluster">
+      {%- for tag in jot.tags -%}
+      <li>{{ tag }}</li>
+      {%- endfor -%}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,35 @@
+---
+layout: base.html
+---
+
+<article>
+  <header class="region | less | invert">
+    <div class="wrapper | meta-data">
+      <h1>{{ title }}</h1>
+      {% if date %}
+
+      <time datetime="{{ date | htmlDateString }}"
+        >{{ date | readableDate }}</time
+      >
+      {% endif %} {% if tags %} {% assign tags = tags | filterTagList | sort %}
+      <ul class="cluster">
+        {% for tag in tags %}
+        <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+
+      {% endif %}
+    </div>
+  </header>
+  <article class="flow | region | wrapper | prose">
+    {% if description %}
+    <p class="tldr">
+      <span class="display"><mark>tldr</mark></span
+      >—{{ description }}
+    </p>
+    {% endif %} {{ content }}
+    <div class="back-to-top">
+      <a href="#the-top">Back to top</a>
+    </div>
+  </article>
+</article>

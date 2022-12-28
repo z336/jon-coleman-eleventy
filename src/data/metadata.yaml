@@ -1,0 +1,31 @@
+title: Jon Coleman
+author: Jon Coleman
+url: https://joncoleman.me/
+language: en
+description: I am writing about technical writing, ux writing, and web development.
+skipContent: Skip to content
+credit:
+  build:
+    - eleventy:
+      title: Eleventy
+      url: https://11ty.dev/
+    - sass:
+      title: Sass
+      url: https://sass-lang.com/
+  host:
+    - github:
+      title: GitHub
+      url: https://github.com/z336
+    - netlify:
+      title: Netlify
+      url: https://www.netlify.com/
+  inspiration:
+    - cube:
+      title: CUBE CSS
+      url: https://cube.fyi/
+    - everyLayout:
+      title: Every Layout
+      url: https://every-layout.dev/
+    - totalitar:
+      title: Totalitär
+      url: https://youtu.be/fSPvLnHaFSI

@@ -1,0 +1,70 @@
+.invert {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+
+  :focus {
+    outline: solid var(--color-light) 0.2rem;
+  }
+
+  ::selection {
+    color: var(--color-dark);
+    background-color: var(--color-highlight);
+  }
+
+  a:not([href*='joncoleman.me/']):not([href^='#']):not([href^='/']):after {
+    background-image: url('/assets/images/external-link-alt.svg');
+  }
+
+  article {
+    background-color: var(--color-dark-alt);
+  }
+
+  // mark,
+  // .highlight-alt {
+  //   background-color: var(--color-highlight-alt);
+  // }
+
+  .site-header {
+    background-color: var(--color-dark-alt);
+  }
+
+  .menu {
+    a {
+      @media (hover: hover) {
+        &:hover {
+          color: var(--color-dark);
+          background-color: var(--color-light);
+        }
+      }
+    }
+    [aria-current='page'] {
+      color: var(--color-dark);
+      background-color: var(--color-light);
+    }
+    [aria-current='page']:focus {
+      outline: double var(--color-light) 0.5rem;
+    }
+  }
+
+  .meta-data li:before {
+    background-image: url('/assets/images/hash-alt.svg');
+  }
+
+  .header-anchor:after {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url('/assets/images/link-alt.svg');
+  }
+
+  .back-to-top {
+    a:after {
+      background-image: url('/assets/images/arrow-up-alt.svg');
+    }
+  }
+
+  .skip-link:focus {
+    color: var(--color-highlight);
+    background-color: var(--color-dark);
+  }
+}

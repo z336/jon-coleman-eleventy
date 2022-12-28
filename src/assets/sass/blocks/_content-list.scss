@@ -1,0 +1,10 @@
+.content-list {
+  list-style: none;
+  border-left: solid 0.2rem;
+  li:not(:first-of-type) h2 {
+    margin-top: var(--space-s-l);
+  }
+  li:not(:first-of-type) h3 {
+    margin-top: var(--space-2xs-xs);
+  }
+}
