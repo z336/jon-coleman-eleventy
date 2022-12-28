@@ -23,7 +23,10 @@
     background-color: var(--color-dark-alt);
   }
 
-  .menu {
+  .navbar {
+    ul {
+      background: var(--color-dark-alt);
+    }
     a {
       @media (hover: hover) {
         &:hover {
@@ -39,10 +42,6 @@
     [aria-current='page']:focus {
       outline: double var(--color-light) 0.5rem;
     }
-  }
-  // todo, combine menu and nav
-  nav.navbar ul {
-    background: var(--color-dark);
   }
 
   .meta-data li:before {
