@@ -11,7 +11,7 @@ body {
   color: var(--color-dark);
   background-color: var(--color-light);
   font-family: var(--font-base);
-  font-size: var(--step-1);
+  font-size: var(--step-0);
   margin: var(--space-2xs-xs);
 }
 
@@ -32,23 +32,23 @@ h1 {
 }
 
 h2 {
-  font-size: var(--step-3);
-}
-
-h3 {
   font-size: var(--step-2);
 }
 
-h4 {
+h3 {
   font-size: var(--step-1);
 }
 
+h4 {
+  font-size: var(--step-0);
+}
+
 h5 {
-  font-size: var(--step--0);
+  font-size: var(--step--1);
 }
 
 h6 {
-  font-size: var(--step--1);
+  font-size: var(--step--2);
 }
 
 p,
@@ -83,13 +83,6 @@ a:not([href*='joncoleman.me/']):not([href^='#']):not([href^='/']):after {
   text-indent: 1em; /* the width of the icon */
 }
 
-footer {
-  p,
-  a {
-    font-size: var(--step-0);
-  }
-}
-
 strong {
   font-family: AuthenticBold;
 }
@@ -102,7 +95,7 @@ mark {
 
 blockquote {
   font-family: var(--font-mono);
-  font-size: var(--step-2);
+  font-size: var(--step-1);
   padding-left: var(--space-m-l);
   border-left: solid 0.2rem;
 }
@@ -113,7 +106,7 @@ hr {
 }
 
 time {
-  font-size: var(--step-0);
+  font-size: var(--step--1);
   opacity: 0.85;
   display: block;
   padding-block: var(--space-3xs-2xs);
@@ -149,6 +142,6 @@ button {
 }
 
 .latest-posts {
-  padding-top: var(--space-m-l);
-  padding-bottom: var(--space-m-l);
+  padding-top: var(--space-s-m);
+  padding-bottom: var(--space-s-m);
 }
